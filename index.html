@@ -1,0 +1,100 @@
+<style>
+  .login-container {
+    width: 100%;
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 22px;
+    background: #111711;
+    border: 1px solid #39ff14;
+    border-radius: 14px;
+    box-shadow: 0 0 12px #39ff1420;
+  }
+
+  .login-container h2 {
+    color: #39ff14;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .login-container label {
+    display: block;
+    margin: 12px 0 6px;
+    color: white;
+  }
+
+  .login-container input,
+  .login-container select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #080b08;
+    color: white;
+    border: 1px solid #405040;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .login-container button {
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    background: #39ff14;
+    color: #061006;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .login-container .login-links {
+    text-align: center;
+    margin-top: 14px;
+    color: #a4afa4;
+    font-size: 14px;
+  }
+</style>
+
+<div class="login-container">
+  <h2>ConstiXLL Login</h2>
+
+  <label for="loginUsername">Username or Email</label>
+  <input
+    id="loginUsername"
+    type="text"
+    placeholder="Enter username or email"
+    autocomplete="username"
+  >
+
+  <label for="loginPassword">Password</label>
+  <input
+    id="loginPassword"
+    type="password"
+    placeholder="Enter password"
+    autocomplete="current-password"
+  >
+
+  <label for="loginRole">Account Type</label>
+  <select id="loginRole">
+    <option value="Member">1 - Member</option>
+    <option value="Creator">2 - Creator</option>
+    <option value="Owner">3 - Owner</option>
+    <option value="Admin">Admin</option>
+  </select>
+
+  <button type="button" onclick="loginPreview()">
+    Log In
+  </button>
+
+  <div class="login-links">
+    Member · Creator · Admin · Owner
+  </div>
+</div>
+
+<script>
+  function loginPreview() {
+    alert(
+      "This is the ConstiXLL login design preview. " +
+      "Connect a secure authentication backend to log in."
+    );
+  }
+</script>
